@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #sendButton{ 
+            margin-top: 10px;
+        }
+
+        .showPassword, #sendButton{
+            color: red;
+        }
+    </style>
+</head>
+<script>
+    function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<body>
+
+    <form action="/mainPage.html">
+        <label for="fname">Uživatelské jméno:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="password">Heslo:</label><br>
+        <input type="password" id="password" name="password">
+    
+        <input type="checkbox" onclick="myFunction()">
+        <label  class="showPassword" for="text">Show Password</label> <br>
+        <input id="sendButton" type="submit" value="Odeslat" />
+    </form>
+
+</body>
+</html>
